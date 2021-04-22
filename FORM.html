@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>FORM contriols</title>
+</head>
+
+<p>Name <input type = "text" size= "65" name= "Name"  /></p>
+<p>Address <input type = "text" size= "65" name = "Address" /></p>
+<p>Gender <input type="checkbox" size="65" name = "Gender"/></p>
+<p>Weight <input type="text" size="65" name = "Weight"/> </p> 
+<p>Height <input type="text" size="65" name = "height"/></p>
+<p>Number <input type= "text" size="65" name = "Number"/></p>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+    </form>
+<body>
+    <h1 style="text-align: center;">FORM for validation</h1>
+    
+    <script>
+        
+function contriols() {
+     var name = document.forms["RegForm"]["Name"];
+     var Address = document.forms["RegForm"]["Address"];
+     var Gender = document.forms["RegForm"]["Gender"]; 
+     
+     if (name.value == " ") {
+         window.alert("Please enter your name");
+         name.focus();
+         return false;  
+     }
+
+     if (Address.value == "") {
+         windows.alert("Please enter your address");
+         address.focus();
+         return false; 
+     }
+
+     if (Gender.value == ""){
+         windows.alert("Please select your choice"); 
+         Gender.focus(); 
+         return false; 
+     }
+
+     if (Weight.value == ""){
+         windows.alert("Please enter your weight");
+         Weight.focus();
+         return false;
+     }
+
+     if (Height.value == ""){
+         windows.alert("Please enter your height"); 
+         Height.focus();
+         return false; 
+     }
+     return true; 
+ }
+           </script>  
+  
+</body>
+</html>
