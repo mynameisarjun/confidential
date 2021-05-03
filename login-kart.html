@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>
+        <input type="text" id="userName" placeholder="username" />
+    </p>
+    <p>
+        <input type="password" id="password" placeholder="password" />
+    </p>
+    <p>
+        <button onclick="login()" id="submitbutton" type="submit">Submit</button>
+    </p>
+    <p>
+        <button onclick="registerUser()" id="registerUserBtn" type="submit">Sign-Up</button>
+    </p>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: lightblue;
+        }
+
+        h1 {
+            color: blue;
+        }
+    </style>
+    <script>
+        var objPeople = [
+            {
+                userName: "Arjun",
+                passWord: "florida@1",
+            },
+            {
+                userName: "Deepak",
+                passWord: "studing@hard",
+            },
+            {
+                userName: "Anshu",
+                passWord: "work@12"
+            },
+            {
+                userName: "ajay",
+                passWord: "success@2021"
+            },
+            {
+                userName: "Ravi",
+                passWord: "master@JS"
+            },
+
+            {
+                userName: "Matt",
+                passWord: "tech@1"
+            }
+        ]
+
+        function login() {
+            var userName = document.getElementById("userName").value;
+            var passWord = document.getElementById("password").value;
+
+            for (var i = 0; i < objPeople.length; i++) {
+                if (userName == objPeople[i].userName && passWord == objPeople[i].passWord) {
+                    console.log(userName + "is logged in!!!")
+                    location.href = "products.html";
+                }
+            }
+            console.log("User is not registered")
+        }
+
+        function registerUser() {
+            location.href = "registration3.html";
+        }
+
+    </script>
+
+</body>
+
+</html>

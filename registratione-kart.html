@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="register">
+        <label for="newUser">User Name</label>
+        <input type="text" id="newUser" placeholder="Enter your Name">
+
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" placeholder="Enter Your Password">
+
+        <button type="submit" onclick="registerUser()">Submit</button>
+
+        <button type="reset" onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+
+        var objPeople = [];
+
+
+        function registerUser() {
+            var registerUser = document.getElementById("newUser").value;
+            var registerPassword = document.getElementById("newPassword").value;
+            var isOkay = true;
+
+            if (registerPassword.length < 8) {
+                isOkay = false;
+                alert("Short Lenght")
+            }
+
+            var newUser = {
+                userName: registerUser,
+                passWord: registerPassword
+            }
+
+            // for (i = 0; i < objPeople.length; i++) {
+            //     if (registerUser == objPeople.userName) {
+            //         alert("user is already registered")
+            //         return
+            //     } else if (registerPassword.length < 8) {
+            //         console.log("length is short")
+            //     }
+            if (isOkay) {
+                objPeople.push(newUser);
+                localStorage.setItem("objPeople", JSON.stringify(objPeople));
+            }
+
+        }
+
+        function reset() {
+            alert("Enter again");
+            var registerUser = document.getElementById("newUser");
+            var registerPassword = document.getElementById("newPassword");
+            registerUser.value = "";
+            registerPassword.value = "";
+        }
+
+    </script>
+
+</body>
+
+</html>

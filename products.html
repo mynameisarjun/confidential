@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="stylingcart.css">
+</head>
+<body>
+    <main id="main-section">
+        <h1>Products</h1>
+
+        <table id="products_table">
+            <thead>
+                <tr>
+                    <td>Product Name</td>
+                    <td>Product Type</td>
+                    <td>Product Price</td>
+                    <td>Product Qty</td>
+                    <td></td>
+                </tr>
+            </thead>
+        </table>
+
+        <div id="cart">
+            <div id="cart_items">
+                <table id="cart_table">
+                    <thead>
+                        <tr>
+                            <td>Product Name</td>
+                            <td>Product Price</td>
+                            <td>Product Qty</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <label for="cart_total">CART TOTAL</label>
+            <input readonly id="cart_total" type="text"/>
+        </div>
+    </main>
+</body>
+<script src="products.js"></script>
+<script>
+    addProductRows();
+</script>
+</html>
